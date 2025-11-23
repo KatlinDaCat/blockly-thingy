@@ -1,6 +1,6 @@
 Blockly.common.defineBlocksWithJsonArray([
     {
-        "type": "main",
+        "type": "functions_main",
         "message0": "main ",
         "message1": "%1",
         "args1": [
@@ -22,3 +22,12 @@ Blockly.common.defineBlocksWithJsonArray([
         ]
     }
 ]);
+
+Blockly.inject('blocklyDiv', {
+    renderer: "thrasos",
+    toolbox: `
+    <xml>
+        <block type="functions_main"></block>
+        <block type="functions_define"></block>
+    </xml>`
+});
