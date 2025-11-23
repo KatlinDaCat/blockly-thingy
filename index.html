@@ -5,19 +5,10 @@
 
     </head>
     <body>
-
         <div id="blocklyDiv"></div>
         <!-- Load Blockly core -->
         <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
-        <!-- Load the default blocks -->
-        <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
-        <!-- Load a generator (e.g., JavaScript) -->
-        <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
-        <!-- Load a message file (e.g., English) -->
-        <script src="https://unpkg.com/blockly/msg/en.js"></script>
-        <script>
-            var workspace = Blockly.inject('blocklyDiv',
-                {toolbox: '<xml><block type="controls_if"></block><block type="logic_compare"></block><block type="math_number"></block><block type="text"></block></xml>'});
-        </script>
+        <!-- Load Blocks -->
+        <script src="src/blocks.js"></script>
     </body>
 </html>
