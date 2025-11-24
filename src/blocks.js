@@ -8,18 +8,28 @@ Blockly.common.defineBlocksWithJsonArray([
                 "type": "input_statement",
                 "name": "FUNC"
             }
-        ]
+        ],
+        "colour": 255
     },
     {
         "type": "functions_define",
-        "message0": "function ",
-        "message1": "%1",
-        "args1": [
+        "message0": "function %1 %2 %3",
+        "args0": [
+            {
+                "type": "field_input",
+                "name": "NAME",
+                "text": "name"
+            },
+            {
+                "type": "input_end_row",
+                "name": "NAME"
+            },
             {
                 "type": "input_statement",
                 "name": "FUNC"
             }
-        ]
+        ],
+        "colour": 225
     }
 ]);
 
