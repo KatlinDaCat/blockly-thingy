@@ -62,7 +62,7 @@ Blockly.inject('blocklyDiv', {
     renderer: "thrasos",
     toolbox: `
     <xml>
-        <block type="functions_main"></block>
-        <block type="functions_define"></block>
+        <block type="oop_classDefinition"></block>
+        <block type="oop_newObject"></block>
     </xml>`
 });
