@@ -1,36 +1,61 @@
 Blockly.common.defineBlocksWithJsonArray([
     {
-        "type": "functions_main",
-        "message0": "main ",
-        "message1": "%1",
-        "args1": [
-            {
-                "type": "input_statement",
-                "name": "FUNC"
-            }
-        ],
-        "colour": 255
-    },
-    {
-        "type": "functions_define",
-        "message0": "function %1 %2 %3",
+        "type": "oop_classDefinition",
+        "tooltip": "",
+        "helpUrl": "",
+        "message0": "class %1 %2 %3 Access: %4 Modifier: %5",
         "args0": [
             {
-                "type": "field_input",
-                "name": "NAME",
-                "text": "name"
+            "type": "field_input",
+            "name": "NAME",
+            "text": "name"
             },
             {
-                "type": "input_end_row",
-                "name": "NAME"
+            "type": "input_end_row",
+            "name": "NAME"
             },
             {
-                "type": "input_statement",
-                "name": "FUNC"
+            "type": "input_statement",
+            "name": "MEMBERS",
+            "check": "CLASSMEMBER"
+            },
+            {
+            "type": "input_value",
+            "name": "ACCESS",
+            "align": "RIGHT",
+            "check": "CLASSACCESS"
+            },
+            {
+            "type": "input_value",
+            "name": "MODIFIER",
+            "align": "RIGHT",
+            "check": "CLASSMODIFIER"
             }
         ],
-        "colour": 225
+        "colour": 180,
+        "inputsInline": false
+    },              
+
+    {
+        "type": "oop_newObject",
+        "tooltip": "Creates a new Object from a class.",
+        "helpUrl": "",
+        "message0": "new %1 %2",
+        "args0": [
+            {
+            "type": "field_variable",
+            "name": "NAME",
+            "variable": "classes"
+            },
+            {
+            "type": "input_dummy",
+            "name": "CLASS"
+            }
+        ],
+        "output": "OBJECT",
+        "colour": 180
     }
+                    
 ]);
 
 Blockly.inject('blocklyDiv', {
