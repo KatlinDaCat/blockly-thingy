@@ -67,6 +67,10 @@ Blockly.common.defineBlocksWithJsonArray([
             "name": "TYPE",
             "options": [
                 [
+                    "none",
+                    "NONE"
+                ],
+                [
                 "static",
                 "STATIC"
                 ],
