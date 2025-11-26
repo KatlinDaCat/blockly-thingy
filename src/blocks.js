@@ -54,7 +54,102 @@ Blockly.common.defineBlocksWithJsonArray([
         ],
         "output": "OBJECT",
         "colour": 180
+    },
+
+    {
+        "type": "oop_class_modifier",
+        "tooltip": "Class modifier.",
+        "helpUrl": "",
+        "message0": "%1 %2",
+        "args0": [
+            {
+            "type": "field_dropdown",
+            "name": "TYPE",
+            "options": [
+                [
+                "static",
+                "STATIC"
+                ],
+                [
+                "abstract",
+                "ABSTRACT"
+                ]
+            ]
+            },
+            {
+            "type": "input_dummy",
+            "name": "TYPE"
+            }
+        ],
+        "output": "CLASSMODIFIER",
+        "colour": 180,
+    },
+
+    {
+        "type": "oop_class_access",
+        "tooltip": "Class access block.",
+        "helpUrl": "",
+        "message0": "%1 %2",
+        "args0": [
+            {
+            "type": "field_dropdown",
+            "name": "ACCESS",
+            "options": [
+                [
+                "public",
+                "PUBLIC"
+                ],
+                [
+                "private",
+                "PRIVATE"
+                ],
+                [
+                "protected",
+                "PROTECTED"
+                ]
+            ]
+            },
+            {
+            "type": "input_dummy",
+            "name": "ACCESS"
+            }
+        ],
+        "output": "CLASSACCESS",
+        "colour": 180,
+        "inputsInline": false
+    },
+                    
+
+    {
+        "type": "val_bool",
+        "tooltip": "Boolean value.",
+        "helpUrl": "",
+        "message0": "%1 %2",
+        "args0": [
+            {
+            "type": "field_dropdown",
+            "name": "TYPE",
+            "options": [
+                [
+                "true",
+                "TRUE"
+                ],
+                [
+                "false",
+                "FALSE"
+                ]
+            ]
+            },
+            {
+            "type": "input_dummy",
+            "name": "TYPE"
+            }
+        ],
+        "output": null,
+        "colour": 135,
+        "inputsInline": false
     }
+                    
                     
 ]);
 
@@ -64,9 +159,14 @@ Blockly.inject('blocklyDiv', {
     <xml>
         <block type="oop_classDefinition">
             <value name="ACCESS">
-                
+                <block type="oop_class_access"></block>
+            </value>
+            <value name="MODIFIER">
+                <block type="oop_class_modifier"></block>
             </value>
         </block>
         <block type="oop_newObject"></block>
+        <block type="oop_class_modifier"></block>
+        <block type="oop_class_access"></block>
     </xml>`
 });
